@@ -5,7 +5,9 @@ export default function Intro() {
         Blog.
       </h1>
       <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
-        Get a beautiful, feature-rich blog up and running. Fast.
+        We have lost even this twilight
+        <br />No one saw us this evening hand in hand
+        <br />While the blue night dropped on the world
       </h4>
     </section>
   )

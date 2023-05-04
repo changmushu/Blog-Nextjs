@@ -13,25 +13,22 @@ export default function About() {
       <Container>
         <PageHeading>Nice to meet you.</PageHeading>
         <section className="max-w-3xl mx-auto py-8 md:py-16 lg:py-24">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+          <p className="text-gray-400">
+            信只是普通的纸，纵使烧了，留在心中的东西依然会留下，不能留下的留了也没用
+            <br />
+            总有一天，我们每个人都会那样子死去的，包括你和我。
+            <br />
+            没有人喜欢孤独，只是不愿失望。
+            <br />
+            在那样震撼的暮色中，我突然想起初美，然后领悟到她当时带给我的震撼到底是什么，那是一种无法满足的，而且今后也不可能满足的少年时代的憧憬。很久以前，我把那样纯洁无垢的憧憬抛弃在什么地方，我甚至想不起他曾存在于我心间。
+            <br />
+            我得花上一段时间才能如此这般回忆起直子的脸，随着时间的消逝，时间花的越来越长，尽管很叫人感到悲哀，但却是千真万确，最初只需要五秒就能想起来的，渐渐地变成十秒、三十秒、一分钟，就像黄昏时的黑影，越拉越长，最后大概会是给黑暗吞噬罢了。
+            <br />
+            “无论看多少次，都是重复同一件事而已。”
+            <br />
+            “有什么办法，我们还不是一直重复在做同一件事。”
           </p>
-          <br />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+
         </section>
       </Container>
     </Layout>

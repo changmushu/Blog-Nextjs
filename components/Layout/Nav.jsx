@@ -42,7 +42,7 @@ export default function Nav({ darkMode, setDarkMode }) {
                 <div className="flex-shrink-0 flex items-center pr-4">
                   <Highlight>
                     <Link href={'/'}>
-                      <a>SANDYPOCKETS</a>
+                      <a>CHANGMUSHU</a>
                     </Link>
                   </Highlight>
                 </div>
