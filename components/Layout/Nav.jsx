@@ -14,10 +14,10 @@ const navigation = [
     name: 'About',
     href: '/about',
   },
-  {
-    name: 'Contact',
-    href: '/contact',
-  },
+  // {
+  //   name: 'Contact',
+  //   href: '/contact',
+  // },
 ]
 
 function classNames(...classes) {
