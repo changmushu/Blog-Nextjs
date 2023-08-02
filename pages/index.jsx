@@ -14,7 +14,7 @@ export default function Index({ allPosts }) {
     <>
       <Layout>
         <Head>
-          <title>Next.js Blog </title>
+          <title>Miraitowa✨✨✨ </title>
         </Head>
         <Container>
           <Intro />
