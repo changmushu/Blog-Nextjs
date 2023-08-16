@@ -14,6 +14,10 @@ const navigation = [
     name: 'About',
     href: '/about',
   },
+  {
+    name:'PhotoGraph',
+    href:'/photograph'
+  }
   // {
   //   name: 'Contact',
   //   href: '/contact',
@@ -27,7 +31,6 @@ function classNames(...classes) {
 export default function Nav({ darkMode, setDarkMode }) {
   const router = useRouter()
   const currentPath = router.pathname
-  console.log(currentPath)
 
   return (
     <Disclosure

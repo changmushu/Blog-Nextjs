@@ -13,7 +13,7 @@ export default function About() {
       <Container>
         <PageHeading>Nice to meet you.</PageHeading>
         <section className="max-w-3xl mx-auto py-8 md:py-16 lg:py-24 ">
-          <p className="text-slate-900 font-light font-['inter']">
+          <p className="text-slate-900 dark:text-white font-light font-['inter']">
             信只是普通的纸，纵使烧了，留在心中的东西依然会留下，不能留下的留了也没用
             <br />
             总有一天，我们每个人都会那样子死去的，包括你和我。

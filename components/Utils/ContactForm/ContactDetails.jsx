@@ -15,7 +15,7 @@ export default function ContactDetails() {
                 className="flex-shrink-0 h-6 w-6 text-gray-400 dark:text-gray-300"
                 aria-hidden="true"
               />
-              <p className="ml-3">Harbin, China</p>
+              <p className="ml-3">Hangzhou, China</p>
             </dd>
           </div>
           <div className="mt-3">
