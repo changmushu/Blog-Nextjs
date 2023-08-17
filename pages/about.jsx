@@ -6,7 +6,7 @@ import PageHeading from '../components/PageHeading'
 
 export default function About() {
   return (
-    <Layout>
+    <Layout isFooter={true} className='pt-10'>
       <Head>
         <title>About | {BLOG_NAME}</title>
       </Head>

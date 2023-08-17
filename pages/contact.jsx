@@ -7,7 +7,7 @@ import PageHeading from '../components/PageHeading'
 
 export default function Contact() {
   return (
-    <Layout>
+    <Layout isFooter={true} className='pt-10'>
       <Head>
         <title>Contact | {BLOG_NAME}</title>
       </Head>

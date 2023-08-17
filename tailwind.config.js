@@ -47,6 +47,11 @@ module.exports = {
         sm: '0 5px 10px rgba(0, 0, 0, 0.12)',
         md: '0 8px 30px rgba(0, 0, 0, 0.12)',
       },
+      backgroundImage: {
+        '2021': "url('../public/assets/blog/a/cool.jpg')",
+        '2022': "url('../public/assets/blog/a/music.png')",
+        '2023': "url('../public/assets/blog/a/rain.jpg')",
+      },
     },
   },
   plugins: [require('@tailwindcss/forms')],

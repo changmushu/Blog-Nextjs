@@ -12,7 +12,7 @@ export default function Index({ allPosts }) {
   const morePosts = allPosts.slice(1)
   return (
     <>
-      <Layout>
+      <Layout isFooter={true} className='pt-10'>
         <Head>
           <title>Miraitowa✨✨✨ </title>
         </Head>
