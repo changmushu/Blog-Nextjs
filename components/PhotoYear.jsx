@@ -44,16 +44,16 @@ export default function PhotoYear() {
   return (
     <div>
       <div className="mt-[100px] bg-cover flex items-center justify-center">
-        {year && <Image src={year} height={400} width={400} alt="picture for my past"/>}
+        {year && <Image src={year} height={400} width={400} alt="picture for my past" />}
       </div>
       <div className={`flex flex-row items-center justify-center h-[650px] gap-[200px] bg-cover absolute inset-x-2/4 bottom-[10%]`}>
         {elements.map((element) => (
           <div
             className={`flex items-center justify-center font-serif text-3xl`}
+            key={element.id}
           >
             <span
               className="cursor-pointer"
-              key={element.id}
               onMouseEnter={() => handleMouseEnter(element.id)}
               onMouseLeave={() => handleMouseLeave(element.id)}
               style={{
