@@ -1,12 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Highlight from "./Utils/Highlight";
-import cool from "../public/assets/blog/a/cool.jpg"
 import music from "../public/assets/blog/a/music.png"
-import rain from "../public/assets/blog/a/rain.jpg"
 import Image from "next/image";
+import Link from "next/link";
+// import { getAllPosts } from '../lib/api'
 
-export default function PhotoYear() {
-
+export default function PhotoYear({post}) {
   const [elements, setElements] = useState([
     { id: 1, year: '2021', opacity: 1 },
     { id: 2, year: '2022', opacity: 1 },
@@ -41,32 +40,45 @@ export default function PhotoYear() {
     setElements(updatedElements);
   };
 
+  useEffect(()=>{
+    console.log(post);
+  })
+
+
   return (
     <div>
       <div className="mt-[100px] bg-cover flex items-center justify-center">
         {year && <Image src={year} height={400} width={400} alt="picture for my past" />}
       </div>
+      {/* <Link href={"/photograph/year2021"}>
+        <a className="">index</a>
+      </Link> */}
       <div className={`flex flex-row items-center justify-center h-[650px] gap-[200px] bg-cover absolute inset-x-2/4 bottom-[10%]`}>
         {elements.map((element) => (
-          <div
-            className={`flex items-center justify-center font-serif text-3xl`}
-            key={element.id}
-          >
-            <span
-              className="cursor-pointer"
-              onMouseEnter={() => handleMouseEnter(element.id)}
-              onMouseLeave={() => handleMouseLeave(element.id)}
-              style={{
-                opacity: element.opacity,
-                transition: 'opacity 0.3s ease',
-              }}>
-              <Highlight>
-                {element.year}
-              </Highlight>
-            </span>
-          </div>
+          <Link as={`/photograph/${post[0].slug}`} href="/photograph/[slug]" key={element.id} passHref>
+            <div
+              className={`flex items-center justify-center font-serif text-3xl`}
+
+            >
+              <span
+                className="cursor-pointer"
+                onMouseEnter={() => handleMouseEnter(element.id)}
+                onMouseLeave={() => handleMouseLeave(element.id)}
+                style={{
+                  opacity: element.opacity,
+                  transition: 'opacity 0.7s ease',
+                }}>
+                <Highlight>
+                  {element.year}
+                </Highlight>
+              </span>
+            </div>
+          </Link>
+
         ))}
       </div>
     </div>
   )
 }
+
+

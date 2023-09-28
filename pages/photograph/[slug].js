@@ -5,10 +5,9 @@ import { BLOG_NAME } from '../../lib/constants'
 import markdownToHtml from '../../lib/markdownToHtml'
 import Container from '../../components/Layout/Container'
 import Head from 'next/head'
-import Header from '../../components/Post/Header'
 import Layout from '../../components/Layout/Layout'
 import PostBody from '../../components/Post/PostBody'
-import PostHeader from '../../components/Post/PostHeader'
+import PhotoPostHeader from '../../components/Post/PhotoPostHeader'
 import PostTitle from '../../components/Post/PostTitle'
 
 export default function Post({ post, morePosts, preview }) {
@@ -31,7 +30,7 @@ export default function Post({ post, morePosts, preview }) {
                 </title>
                 <meta property="og:image" content={post.ogImage.url} />
               </Head>
-              <PostHeader
+              <PhotoPostHeader
                 title={post.title}
                 coverImage={post.coverImage}
                 date={post.date}
@@ -57,6 +56,8 @@ export async function getStaticProps({ params }) {
     'coverImage',
   ])
   const content = await markdownToHtml(post.content || '')
+
+  console.log(post);
 
   return {
     props: {
