@@ -6,9 +6,9 @@ import { getAllPosts } from '../lib/api'
 import { useEffect } from 'react'
 export default function PhotoGraph({ allPosts }) {
   const heroPost = allPosts;
-  useEffect(() => {
-    console.log(heroPost);
-  })
+  // useEffect(() => {
+  //   console.log(heroPost);
+  // })
   return (
     <Layout isFooter={false} className='pt-10'>
       <Head>

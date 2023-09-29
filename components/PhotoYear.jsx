@@ -3,9 +3,10 @@ import Highlight from "./Utils/Highlight";
 import music from "../public/assets/blog/a/music.png"
 import Image from "next/image";
 import Link from "next/link";
-// import { getAllPosts } from '../lib/api'
 
-export default function PhotoYear({post}) {
+
+export default function PhotoYear({ post }) {
+
   const [elements, setElements] = useState([
     { id: 1, year: '2021', opacity: 1 },
     { id: 2, year: '2022', opacity: 1 },
@@ -40,22 +41,31 @@ export default function PhotoYear({post}) {
     setElements(updatedElements);
   };
 
-  useEffect(()=>{
-    console.log(post);
+  useEffect(() => {
+    for (let i of post) {
+      let name = i.title.split(" ")[1];
+      let newElements = elements;
+      if (!isNaN(parseInt(name, 0))) {
+        for (let j of elements) {
+
+          if (name === j.year) {
+            newElements[j.id - 1] = { ...newElements[j.id - 1], slug: i.slug }
+          }
+          setElements(newElements);
+        }
+      }
+    }
   })
 
 
   return (
     <div>
-      <div className="mt-[100px] bg-cover flex items-center justify-center">
+      <div className="bg-cover flex items-center justify-center h-screen">
         {year && <Image src={year} height={400} width={400} alt="picture for my past" />}
       </div>
-      {/* <Link href={"/photograph/year2021"}>
-        <a className="">index</a>
-      </Link> */}
       <div className={`flex flex-row items-center justify-center h-[650px] gap-[200px] bg-cover absolute inset-x-2/4 bottom-[10%]`}>
         {elements.map((element) => (
-          <Link as={`/photograph/${post[0].slug}`} href="/photograph/[slug]" key={element.id} passHref>
+          <Link as={`/photograph/${element.slug}`} href="/photograph/[slug]" key={element.id} passHref>
             <div
               className={`flex items-center justify-center font-serif text-3xl`}
 
